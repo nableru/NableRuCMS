@@ -1,0 +1,241 @@
+<?php
+/* @var $this JDealsController */
+/* @var $model EJdeals */
+/* @var $form CActiveForm */
+?>
+
+<div class="form">
+
+<?php $form=$this->beginWidget('CActiveForm', array(
+	'id'=>'ejdeals-form',
+	'enableAjaxValidation'=>true,
+)); ?>
+
+	<p class="note">Fields with <span class="required">*</span> are required.</p>
+
+	<?php echo $form->errorSummary($model); ?>
+
+	<div class="row">
+		<?php echo $form->labelEx($model,'balance'); ?>
+		<?php echo $form->textField($model,'balance',array('size'=>11,'maxlength'=>11)); ?>
+		<?php echo $form->error($model,'balance'); ?>
+	</div>
+
+	<div class="row">
+		<?php echo $form->labelEx($model,'symbol'); ?>
+		<?php echo $form->dropDownList($model,'symbol', EForexSymbol::getSymbols(),array('empty' => '')); ?>
+		<?php echo $form->error($model,'symbol'); ?>
+	</div>
+
+	<div class="row">
+		<?php echo $form->labelEx($model,'otime'); ?>
+		<?php echo $form->textField($model,'otime'); ?>
+		<?php echo $form->error($model,'otime'); ?>
+	</div>
+
+	<div class="row">
+		<?php echo $form->labelEx($model,'ctime'); ?>
+		<?php echo $form->textField($model,'ctime'); ?>
+		<?php echo $form->error($model,'ctime'); ?>
+	</div>
+
+	<div class="row">
+		<?php echo $form->labelEx($model,'oprice'); ?>
+		<?php echo $form->textField($model,'oprice',array('size'=>8,'maxlength'=>8)); ?>
+		<?php echo $form->error($model,'oprice'); ?>
+	</div>
+
+	<div class="row">
+		<?php echo $form->labelEx($model,'cprice'); ?>
+		<?php echo $form->textField($model,'cprice',array('size'=>8,'maxlength'=>8)); ?>
+		<?php echo $form->error($model,'cprice'); ?>
+	</div>
+
+	<div class="row">
+		<?php echo $form->labelEx($model,'swap'); ?>
+		<?php echo $form->textField($model,'swap',array('size'=>8,'maxlength'=>8)); ?>
+		<?php echo $form->error($model,'swap'); ?>
+	</div>
+
+	<div class="row">
+		<?php echo $form->labelEx($model,'lot'); ?>
+		<?php echo $form->textField($model,'lot',array('size'=>5,'maxlength'=>5)); ?>
+		<?php echo $form->error($model,'lot'); ?>
+	</div>
+
+	<div class="row">
+		<?php echo $form->labelEx($model,'osl'); ?>
+		<?php echo $form->textField($model,'osl',array('size'=>8,'maxlength'=>8)); ?>
+		<?php echo $form->error($model,'osl'); ?>
+	</div>
+
+	<div class="row">
+		<?php echo $form->labelEx($model,'csl'); ?>
+		<?php echo $form->textField($model,'csl',array('size'=>8,'maxlength'=>8)); ?>
+		<?php echo $form->error($model,'csl'); ?>
+	</div>
+
+	<div class="row">
+		<?php echo $form->labelEx($model,'otp'); ?>
+		<?php echo $form->textField($model,'otp',array('size'=>8,'maxlength'=>8)); ?>
+		<?php echo $form->error($model,'otp'); ?>
+	</div>
+
+	<div class="row">
+		<?php echo $form->labelEx($model,'ctp'); ?>
+		<?php echo $form->textField($model,'ctp',array('size'=>8,'maxlength'=>8)); ?>
+		<?php echo $form->error($model,'ctp'); ?>
+	</div>
+
+	<div class="row">
+		<?php echo $form->labelEx($model,'lpips'); ?>
+		<?php echo $form->textField($model,'lpips',array('size'=>5,'maxlength'=>5)); ?>
+		<?php echo $form->error($model,'lpips'); ?>
+	</div>
+
+	<div class="row">
+		<?php echo $form->labelEx($model,'ppips'); ?>
+		<?php echo $form->textField($model,'ppips',array('size'=>5,'maxlength'=>5)); ?>
+		<?php echo $form->error($model,'ppips'); ?>
+	</div>
+
+	<div class="row">
+		<?php echo $form->labelEx($model,'dealrisk'); ?>
+		<?php echo $form->textField($model,'dealrisk',array('size'=>5,'maxlength'=>5)); ?>
+		<?php echo $form->error($model,'dealrisk'); ?>
+	</div>
+
+	<div class="row">
+		<?php echo $form->labelEx($model,'oreason'); ?>
+		<?php echo $form->textArea($model,'oreason',array('rows'=>6, 'cols'=>50)); ?>
+		<?php echo $form->error($model,'oreason'); ?>
+	</div>
+
+	<div class="row">
+		<?php echo $form->labelEx($model,'creason'); ?>
+		<?php echo $form->textArea($model,'creason',array('rows'=>6, 'cols'=>50)); ?>
+		<?php echo $form->error($model,'creason'); ?>
+	</div>
+
+	<div class="row">
+		<?php echo $form->labelEx($model,'analysis'); ?>
+		<?php echo $form->textArea($model,'analysis',array('rows'=>6, 'cols'=>50)); ?>
+		<?php echo $form->error($model,'analysis'); ?>
+	</div>
+
+<?php /*
+	<div class="row">
+		<?php echo $form->labelEx($model,'addedby'); ?>
+		<?php echo $form->textField($model,'addedby'); ?>
+		<?php echo $form->error($model,'addedby'); ?>
+	</div>
+
+	<div class="row">
+		<?php echo $form->labelEx($model,'updatedby'); ?>
+		<?php echo $form->textField($model,'updatedby'); ?>
+		<?php echo $form->error($model,'updatedby'); ?>
+	</div>
+
+	<div class="row">
+		<?php echo $form->labelEx($model,'nable_user_id'); ?>
+		<?php echo $form->textField($model,'nable_user_id'); ?>
+		<?php echo $form->error($model,'nable_user_id'); ?>
+	</div>
+
+	<div class="row">
+		<?php echo $form->labelEx($model,'nable_role_id'); ?>
+		<?php echo $form->textField($model,'nable_role_id'); ?>
+		<?php echo $form->error($model,'nable_role_id'); ?>
+	</div>
+
+	<div class="row">
+		<?php echo $form->labelEx($model,'modifydate'); ?>
+		<?php echo $form->textField($model,'modifydate'); ?>
+		<?php echo $form->error($model,'modifydate'); ?>
+	</div>
+
+	<div class="row">
+		<?php echo $form->labelEx($model,'adddate'); ?>
+		<?php echo $form->textField($model,'adddate'); ?>
+		<?php echo $form->error($model,'adddate'); ?>
+	</div>
+
+	<div class="row">
+		<?php echo $form->labelEx($model,'isString'); ?>
+		<?php echo $form->textField($model,'isString'); ?>
+		<?php echo $form->error($model,'isString'); ?>
+	</div>
+
+	<div class="row">
+		<?php echo $form->labelEx($model,'isText'); ?>
+		<?php echo $form->textField($model,'isText'); ?>
+		<?php echo $form->error($model,'isText'); ?>
+	</div>
+
+	<div class="row">
+		<?php echo $form->labelEx($model,'isInt'); ?>
+		<?php echo $form->textField($model,'isInt'); ?>
+		<?php echo $form->error($model,'isInt'); ?>
+	</div>
+
+	<div class="row">
+		<?php echo $form->labelEx($model,'isFloat'); ?>
+		<?php echo $form->textField($model,'isFloat'); ?>
+		<?php echo $form->error($model,'isFloat'); ?>
+	</div>
+
+	<div class="row">
+		<?php echo $form->labelEx($model,'isBool'); ?>
+		<?php echo $form->textField($model,'isBool'); ?>
+		<?php echo $form->error($model,'isBool'); ?>
+	</div>
+
+	<div class="row">
+		<?php echo $form->labelEx($model,'isCost'); ?>
+		<?php echo $form->textField($model,'isCost'); ?>
+		<?php echo $form->error($model,'isCost'); ?>
+	</div>
+
+	<div class="row">
+		<?php echo $form->labelEx($model,'isImage'); ?>
+		<?php echo $form->textField($model,'isImage'); ?>
+		<?php echo $form->error($model,'isImage'); ?>
+	</div>
+
+	<div class="row">
+		<?php echo $form->labelEx($model,'isFile'); ?>
+		<?php echo $form->textField($model,'isFile'); ?>
+		<?php echo $form->error($model,'isFile'); ?>
+	</div>
+
+	<div class="row">
+		<?php echo $form->labelEx($model,'isDate'); ?>
+		<?php echo $form->textField($model,'isDate'); ?>
+		<?php echo $form->error($model,'isDate'); ?>
+	</div>
+
+	<div class="row">
+		<?php echo $form->labelEx($model,'isTime'); ?>
+		<?php echo $form->textField($model,'isTime'); ?>
+		<?php echo $form->error($model,'isTime'); ?>
+	</div>
+
+	<div class="row">
+		<?php echo $form->labelEx($model,'isSingle'); ?>
+		<?php echo $form->textField($model,'isSingle'); ?>
+		<?php echo $form->error($model,'isSingle'); ?>
+	</div>
+
+	<div class="row">
+		<?php echo $form->labelEx($model,'isMulti'); ?>
+		<?php echo $form->textField($model,'isMulti'); ?>
+		<?php echo $form->error($model,'isMulti'); ?>
+	</div>
+*/ ?>
+	<div class="row buttons">
+		<?php echo CHtml::submitButton($model->isNewRecord ? 'Create' : 'Save'); ?>
+	</div>
+
+<?php $this->endWidget(); ?>
+
+</div><!-- form -->

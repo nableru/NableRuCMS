@@ -1,0 +1,43 @@
+#mc2 { background: #fdfdfd; } /* левое меню */
+#mc2 .bg { background-color: #fdfdfd; }
+#main { background: #d8e1ec; border-left: 1px solid #667d8c; } /* основной слой содержимого */
+
+/* ШАПКА */
+.bvert { border-left-color: #5d9bd5; border-right-color: #316798; } /* вертикальный разделитель. в темплейте необходимо проставлять высоту и padding */
+
+
+#ohead { background: #3972a7; border-bottom: 1px solid #316798; }
+
+/* главное меню */
+#mmenu {
+	background: #4984bc url(../../../images/skins/blue/fone_menu.gif) repeat-x;
+	border-top: 1px solid #5d9bd5;
+	border-bottom: 1px solid #316798;
+}
+#mmenu li a { border-left-color: #316798; border-right-color: #5d9bd5; }
+/* главное меню */
+/* ШАПКА */
+
+/* основные рамки */
+#ohelp,#omess,#content { border: 1px solid #7f9db9; } /* внешняя рамка */
+/* /основные рамки */
+
+#main a, #dn { color: #3972a7; } /* строка длублирующей навигации */
+
+#i_menu { /* полоска отображения/сокрытия левого меню */
+	background: #92a4b0 url(../../../images/skins/blue/sv_menu.gif) no-repeat center center;
+	border-right: 1px solid #b1c1cc;
+	border-left: 1px solid #667d8c;
+}
+#i_menu:hover { background-color: #b1c1cc; }
+
+/* временно закоментированно */
+/*#content div, fieldset, .select_lang { border: 1px solid #c8d0e3; }*/
+form div.row:nth-child(odd), .zebra1 { background: #ffffff; }
+form div.row:nth-child(even), .zebra2 { background: #fbfcfd; }
+form div.row { border-color: #C8D0E3; }
+
+table.list { background-color: #c8d0e3; }
+table.list .header, table.list tfoot, table.list thead, .select_lang { background-color: #f4f7fa; }
+
+.border { border: 1px solid #c8d0e3; } /* внешняя рамка */

@@ -1,0 +1,20 @@
+<?php
+
+class MenuController extends NableController
+{
+    //public $layout = null;
+
+    public function actionIndex()
+    {
+        $vars = array(
+            'content' => 'содержимое',
+            'helpText' => 'Текст блока "Подсказка"',
+            'breadcrumbs' => array(
+                'Меню',
+            ),
+        );
+
+        $vars['backendImagesPath'] = Yii::app()->clientScript->getPackageBaseUrl('nableBackend').'/images';
+        $this->render('list', $vars); 
+    }
+}

@@ -1,0 +1,177 @@
+/* Основные стили */
+html, body { height: 100%; min-height: 100%; min-width: 100%; margin: 0; padding: 0; width: 100%; overflow: auto; }
+* html, * body { height: 100%; width: 100%; }
+html,body,a,td,th,input,select,textarea { font-family: Tahoma,Arial,Courier; font-size: 11px; color: #000000; }
+form { margin: 0px; padding: 0px; }
+img { border: none; } /* чтобы не отображалась рамка у картинок с ссылками */
+h1 { margin: 0; padding: 0; font-size: 100%; }
+
+a { text-decoration: underline; }
+a:hover { text-decoration: none; }
+.bold { font-weight: bold; }
+.red { color: #BD0808;}
+.bred { color: #f0c8d0; }
+.green { color: #22A012;}
+.bgree { background-color: #cdf0c8; }
+.fr { float: right; }
+.visible { display: block !important; }
+.hidden { display: none !important; }
+span.required { color: red; }
+form div.row { padding: 6px; }
+label { display: block; line-height: 1em; }
+fieldset {
+	border: 1px solid; margin: 5px;
+	padding: 5px;
+}
+input, select, textarea { margin: 7px 2px 2px 15px; display: block; }
+fieldset input[type=text], fieldset textarea { display: block; width: 100%; }
+form div.row { border: #ECE9D8 solid 1px; border-bottom: none; }
+form div.row:last-of-type { border-bottom: #ECE9D8 solid 1px; }
+
+/* Основные стили */
+
+#outerWrapper { position: relative; min-width: 1024px; height: 100%; }
+
+#i_menu {
+	position: absolute;
+	width: 4px;
+	cursor: pointer;
+}
+
+#mc2 {	/* левое меню */
+	width: 300px;
+	position: absolute;
+	left: 6px;
+	overflow: auto;
+	border: green 1px solid;
+}
+
+#main
+{
+	left: 307px;
+	right: 0px;
+	position: absolute;
+	overflow: auto;
+	z-index: 2;
+}
+#knopka { margin-top: -5px; }
+
+#i_menu,#main { top: 34px; bottom: 0px; }
+#mc2 { top: 34px; bottom: 125px; }
+
+#cwrapper { padding: 6px; padding-top: 0px; min-height: 70%; }
+
+#content { padding: 5px; background: #ffffff; min-height: 100%; bottom: 0px; }
+
+/* ШАПКА */
+#header { position: absolute; width: 100%; height: 117px; color: #ffffff; }
+#header a { color: #ffffff; }
+.bvert { height: 31px; width: 0px; border-left: 1px solid #c2d1db; border-right: 1px solid #6c818f; } /* вертикальный разделитель. в темплейте необходимо проставлять высоту и padding */
+#ohead .bvert { margin-top: 11px; float: left; }
+
+#logo { width: 212px; height: 53px; float: left; margin-right: 16px; }
+#ohead { height: 53px; padding: 2px 0px; padding: 16px; display: none; }
+#user { text-align: left; margin-left: 240px; padding: 11px 0px; line-height: 15px; }
+
+/* главное меню */
+#mmenu {
+	height: 17px;
+	padding: 7px 8px 5px 22px;
+}
+#mmenu a { padding: 0px 9px; text-decoration: none; }
+#mmenu .bvert { height: 18px; }
+#mmenu a:hover { text-decoration: underline; }
+#mmenu img { display: inline; vertical-align: middle; } /* разделитель в главном меню */
+#mmenu li { float: left;}
+#mmenu li a { border-left: 1px solid #6c818f; border-right: 1px solid #c2d1db; }
+#mmenu li.first a { border-left: 0px; }
+#mmenu li.last a { border-right: 0px; padding-right: 0; }
+#mmenu ul { margin: 0; padding: 0; list-style: none; }
+#mmenu li.active a { font-weight: bold; }
+
+/* меню 3 (кнопки "документация" и "выход")*/
+ul#menu3 { float: right; }
+/* /меню 3 */
+/* главное меню */
+/* ШАПКА */
+
+/* блок помощи */
+#ohelp { margin: 6px 0px; } /* внешняя рамка */
+.helph { background: #ece197; } /* заголовок блока */
+.helph div { border-top: 1px solid #fffbc8; border-bottom: 1px solid #d5c886; clear: both; }
+#text_help { background: #ffffff; padding: 21px; text-align: justify; } /* текстовый блок */
+#str { cursor: pointer; padding: 9px 10px; float: right; }
+/* /блок помощи */
+
+/* блок ошибок. основные стили такие же как и у блока помощи */
+#omess { margin-bottom: 6px; } /* внешняя рамка */
+#errors { background: #fee; padding: 21px; text-align: justify; } /* текстовый блок */
+/* /блок ошибок */
+
+#dn { height: 32px; line-height: 32px; margin-left: 18px; } /* строка длублирующей навигации */
+
+.clearing { clear: both; width: 0px; height: 0px; }
+
+/* отображение большинства страничек в этой таблице */
+#content table.list { border-collapse: separate; border-spacing: 1px; width: 100%; }
+#content table.list tfoot { text-align: right; }
+#content table.list thead .fff { background: #ffffff; }
+#content table.list thead span { float: right; }
+#content table.list td { padding: 6px; }
+#content table.list a { margin-left: 5px; }
+/* отображение большинства страничек в этой таблице */
+
+/* для tinymce */
+#content table.list td td { padding: 0px; }
+#content table.list td td a { margin-left: auto; }
+/* для tinymce */
+
+#menu2 { margin: 0; padding: 0; }
+#menu2 li { display: block; border-top: 1px solid #FFFFFF; border-bottom: 1px solid #C3C3C3; padding-left: 5px; min-height: 23px; line-height: 23px; }
+
+.notfound { text-align: center; font-weight: bold; background: #ffffff; }
+.center { text-align: center; }
+
+.select_lang { padding: 0 5px; text-decoration: none; width: 22px; display: block; float: left; text-align: center; }
+
+.dblock { display: block; }
+.dnone { display: none; }
+
+.mceExternalToolbar { position: absolute; left: 0px; top: 0px;}
+
+#skins { text-align: center; }
+#copy { text-align: center; padding-top: 30px; margin-bottom: 20px; }
+#lmenu { position: absolute; bottom: 0px; left: 7px; width: 307px; }
+
+#oAbsDiv { position: absolute; top: 0px; left: 0px; width: 100%; height: 100%; z-index: 1000; background: url(../../images/trans50.png); display: table-cell; text-align: center; vertical-align: middle; }
+.prompt { position: absolute; top: 50%; left: 50%; z-index: 1001; background: #ffffff; text-align: center; padding: 50px; width: 300px; margin: -75px 0px 0px -150px }
+
+.notfound { text-align: center; font-weight: bold; }
+
+#tooltip{
+	background:#FFFFFF;
+	border: 1px solid #666666;
+	color: #333333;
+	margin: 0px;
+	margin-left: 10px;
+	padding: 3px 5px;
+	position: absolute;
+	visibility: hidden;
+	z-index: 10000;
+}
+
+acronym { border-bottom: 1px dotted; cursor: help; }
+#content div.colData { margin: 7px 2px 2px 15px; border: 0px; }
+#content div.langCh { margin: 7px 2px 2px -5px; border: 0px; }
+/* временно закоментировано #content div div { border: 0 none; } */
+
+.column { margin: 7px 2px 2px 15px; border: 0 !important; }
+
+/* страницы HTTP ошибок 403,404 */
+#outerWrapper.httpError .httpError1 { background-image: url(../images/key_login_h.gif); background-position: 65% bottom; background-repeat: no-repeat; }
+#outerWrapper.httpError .httpError2 { height: 189px; vertical-align: top; padding-left: 120px; text-align: center; background-image: url(../images/key_login_f.gif); background-position: 65% top; background-repeat: no-repeat; }
+#outerWrapper.httpError #main.httpError { left: 0; border-left: 0; }
+#outerWrapper.httpError #cwrapper { position: absolute; padding: 0; top: 15px; bottom: 0; left: 6px; right: 6px; }
+#outerWrapper.httpError #content { position: relative; min-height: inherit; }
+#outerWrapper.httpError form { height: 100%; }
+#outerWrapper.httpError table.httpError { top: 15px; bottom: 0; }

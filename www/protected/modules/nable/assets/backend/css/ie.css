@@ -1,0 +1,16 @@
+#main { width: expression((document.body.clientWidth - 309)+'px'); }
+
+#i_menu,#menu2,#main
+{
+/*	height: expression((document.body.clientHeight - 119)+'px'); состояние когда меню показано. по-умолчанию оно у нас скрыто */
+	height: expression((document.body.clientHeight - 34)+'px');
+}
+
+/* ШАПКА */
+#logo { filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/admin/images/icons/logo.png'); }
+#logo img { filter:progid:DXImageTransform.Microsoft.Alpha(opacity=0); }
+/* ШАПКА */
+
+/* отображение большинства страничек в этой таблице */
+#content table { width: 99%; }
+/* отображение большинства страничек в этой таблице */
